@@ -75,7 +75,6 @@ class MainActivity : AppCompatActivity() {
             animatorSet.duration = 2000
             animatorSet.playTogether(anim,anim2)
             animatorSet.start()
-            LruCache
         }
         var isDownOrUp = false
         button3.setOnClickListener{
