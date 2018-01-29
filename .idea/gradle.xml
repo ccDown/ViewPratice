@@ -9,6 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/kanimation" />
+            <option value="$PROJECT_DIR$/knotifition" />
+            <option value="$PROJECT_DIR$/kpicturepick" />
+            <option value="$PROJECT_DIR$/kservice" />
             <option value="$PROJECT_DIR$/viewmodule" />
           </set>
         </option>

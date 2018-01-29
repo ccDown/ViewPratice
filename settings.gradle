@@ -1,1 +1,1 @@
-include ':app', ':viewmodule'
+include ':app', ':viewmodule', ':kanimation', ':knotifition', ':kservice', ':kpicturepick'

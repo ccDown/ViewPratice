@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,9 +9,40 @@
     tools:context="com.soul.listener.myapplication.MainActivity">
 
     <com.soul.listener.myapplication.TextViewTest
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/textview"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
         app:android.text="test"
+        app:android.textSize="50dp"
        />
 
-</RelativeLayout>
+    <TextView
+        android:background="@color/colorPrimary"
+        android:text="宽哥哥万岁万岁万万岁"
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:text="按钮ofObject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button2"
+        android:text="移动变色"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/button3"
+        android:text="AnimatorProPerty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.soul.listener.myapplication.PaintView
+        android:id="@+id/paintview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

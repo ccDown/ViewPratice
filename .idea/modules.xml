@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ViewPratice.iml" filepath="$PROJECT_DIR$/ViewPratice.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kanimation/kanimation.iml" filepath="$PROJECT_DIR$/kanimation/kanimation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/knotifition/knotifition.iml" filepath="$PROJECT_DIR$/knotifition/knotifition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kpicturepick/kpicturepick.iml" filepath="$PROJECT_DIR$/kpicturepick/kpicturepick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kservice/kservice.iml" filepath="$PROJECT_DIR$/kservice/kservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewmodule/viewmodule.iml" filepath="$PROJECT_DIR$/viewmodule/viewmodule.iml" />
     </modules>
   </component>
