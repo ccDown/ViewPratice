@@ -1,1 +1,1 @@
-include ':app', ':viewmodule', ':kanimation', ':knotifition', ':kservice', ':kpicturepick'
+include ':app', ':viewmodule', ':kanimation', ':knotifition', ':kservice', ':kpicturepick', ':kswipelayout', ':colormatrixdemo'

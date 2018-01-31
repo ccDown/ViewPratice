@@ -8,7 +8,7 @@ import android.support.v4.app.Fragment
 /**
  * @description
  * @author kuan
- * Created on 2018/1/29.
+ * Created on 2018/picture/29.
  */
 public class PhotoUtil() {
     companion object {

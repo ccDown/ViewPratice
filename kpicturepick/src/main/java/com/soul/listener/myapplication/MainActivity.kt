@@ -5,7 +5,7 @@ import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.BitmapFactory
+import android.graphics.*
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
@@ -20,9 +20,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
-
-
-
 
 class MainActivity : AppCompatActivity() {
     private var imageUri :Uri ? = null
@@ -79,6 +76,46 @@ class MainActivity : AppCompatActivity() {
             // 开启一个带有返回值的Activity，请求码为PHOTO_REQUEST_CAREMA
             startActivityForResult(intent, RESULT_TAKE_PHOTO);
         }
+
+//        imageview.setOnGenericMotionListener(object : View.OnGenericMotionListener {
+//            override fun onGenericMotion(v: View?, event: MotionEvent?): Boolean {
+//                if (event!!.pointerCount<2)return false
+//
+//            }
+//
+//        })
+
+        imageview.setOnClickListener {
+            imageview.isDrawingCacheEnabled = true
+            var bitmap = Bitmap.createBitmap(imageview.getDrawingCache())
+            val paint = Paint()
+            paint.isAntiAlias = true
+            val colorMatrix = ColorMatrix(floatArrayOf(
+                    1f, 0f, 0f, 0f, 0f,
+                    0f, 1f, 0f, 0f, 500f,
+                    0f, 0f, 1f, 0f, 0f,
+                    0f, 0f, 0f, 1f, 0f
+            ))
+
+            val matrix = Matrix()
+            matrix.setRotate(500f,30f,60f)
+
+            paint.setColorFilter(ColorMatrixColorFilter(colorMatrix))
+            val canvas = Canvas()
+
+            bitmap = Bitmap.createBitmap(bitmap,0,0,bitmap.width,bitmap.height,matrix,true)
+            canvas.drawBitmap(bitmap,null, Rect(0,0,bitmap.width, 500 * bitmap!!.height / bitmap!!.width),paint)
+
+            imageview.draw(canvas)
+            imageview.isDrawingCacheEnabled = false
+
+
+            val canva = Canvas()
+            imageview.draw(canva)
+            imageview.postInvalidate()
+        }
+
+
     }
 
     /*
