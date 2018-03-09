@@ -1,0 +1,25 @@
+ExifInterface.TAG_ORIENTATION //旋转角度，整形表示，在ExifInterface中有常量对应表示
+ExifInterface.TAG_DATETIME //拍摄时间，取决于设备设置的时间
+ExifInterface.TAG_MAKE //设备品牌
+ExifInterface.TAG_MODEL //设备型号，整形表示，在ExifInterface中有常量对应表示
+ExifInterface.TAG_FLASH //闪光灯
+ExifInterface.TAG_IMAGE_LENGTH //图片高度
+ExifInterface.TAG_IMAGE_WIDTH //图片宽度
+ExifInterface.TAG_GPS_LATITUDE //纬度
+ExifInterface.TAG_GPS_LONGITUDE //经度
+ExifInterface.TAG_GPS_LATITUDE_REF //纬度名（N or S）
+ExifInterface.TAG_GPS_LONGITUDE_REF //经度名（E or W）
+ExifInterface.TAG_EXPOSURE_TIME //曝光时间
+ExifInterface.TAG_APERTURE //光圈值
+ExifInterface.TAG_ISO //ISO感光度
+ExifInterface.TAG_DATETIME_DIGITIZED //数字化时间
+ExifInterface.TAG_SUBSEC_TIME //
+ExifInterface.TAG_SUBSEC_TIME_ORIG //
+ExifInterface.TAG_SUBSEC_TIME_DIG //
+ExifInterface.TAG_GPS_ALTITUDE //海拔高度
+ExifInterface.TAG_GPS_ALTITUDE_REF //海拔高度
+ExifInterface.TAG_GPS_TIMESTAMP //时间戳
+ExifInterface.TAG_GPS_DATESTAMP //日期戳
+ExifInterface.TAG_WHITE_BALANCE //白平衡
+ExifInterface.TAG_FOCAL_LENGTH //焦距
+ExifInterface.TAG_GPS_PROCESSING_METHOD //用于定位查找的全球定位系统处理方法。

@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment
  * Created on 2018/picture/29.
  */
 public class PhotoUtil() {
+
     companion object {
         public val NONE = 0
 

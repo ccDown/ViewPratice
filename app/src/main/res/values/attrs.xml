@@ -3,4 +3,9 @@
     <declare-styleable name="TagView">
         <attr name="android.background"/>
     </declare-styleable>
+
+    <declare-styleable name="CircleView">
+        <attr name="android.background"/>
+    </declare-styleable>
+
 </resources>
