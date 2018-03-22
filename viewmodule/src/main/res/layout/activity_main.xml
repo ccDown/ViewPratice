@@ -46,11 +46,12 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
-            android:background="@color/colorPrimary"
-            android:text="移动1"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:text="移动1" />
 
         <TextView
             android:layout_marginLeft="50dp"
@@ -65,6 +66,19 @@
             android:text="按钮"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/transition_drawable"
+            android:id="@+id/circleview"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <!--<com.soul.listener.myapplication.CircleView-->
+            <!--android:src="@drawable/transition_drawable"-->
+            <!--app:circleColor="@color/error_color_material"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
     </com.soul.listener.myapplication.DragView>
 
     <!--<com.soul.listener.myapplication.PaintView-->

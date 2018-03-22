@@ -1,8 +1,10 @@
 package com.soul.listener.myapplication
 
 import android.animation.*
+import android.graphics.drawable.TransitionDrawable
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.support.annotation.RequiresApi
 import android.support.v7.app.AppCompatActivity
 import android.view.animation.BounceInterpolator
@@ -91,10 +93,42 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+
+        circleview.setOnClickListener {
+            val transitionDrawable = circleview.drawable as TransitionDrawable
+            transitionDrawable.startTransition(500)
+            Thread{
+                while (true){
+                    val message = mHandler.obtainMessage()
+                    message.what = 1
+                    Thread.sleep(500)
+                    mHandler.sendMessage(message)
+                }
+            }.start()
+        }
+
 //        paintview.setOnLongClickListener {
 //            true
 //        }
     }
+
+    private var direction = true
+    private val mHandler = Handler{
+        when(it.what){
+            1 ->{
+                val transitionDrawable = circleview.drawable as TransitionDrawable
+                transitionDrawable.isCrossFadeEnabled = true
+                transitionDrawable.startTransition(500)
+            }
+            0 ->{
+
+            }
+        }
+        false
+    }
+
+
 
     class PointEvaluator<T> : TypeEvaluator<T> {
         override fun evaluate(fraction: Float, startValue: T, endValue: T): T {

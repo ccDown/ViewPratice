@@ -1,8 +1,8 @@
 package com.soul.listener.viewpratice
 
+import android.graphics.drawable.TransitionDrawable
 import android.os.Bundle
 import android.os.Handler
-import android.os.Message
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,36 +18,38 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        handler = Handler {
-            when (it.arg1) {
-                1 -> {
-                    button.setBackgroundResource(R.drawable.love_small)
-                    jumpState = true
-                    val newMessage = handler.obtainMessage()
-                    newMessage.arg1 = 2
-                    handler.sendMessageDelayed(newMessage,300)
-
-                    true
-                }
-                2 -> {
-                    button.setBackgroundResource(R.drawable.love_big)
-                    jumpState = false
-                    val newMessage = handler.obtainMessage()
-                    newMessage.arg1 = 1
-                    handler.sendMessageDelayed(newMessage,300)
-                    true
-                }
-                else -> {
-                    false
-                }
-            }
-        }
+//        handler = Handler {
+//            when (it.arg1) {
+//                1 -> {
+//                    button.setBackgroundResource(R.drawable.love_small)
+//                    jumpState = true
+//                    val newMessage = handler.obtainMessage()
+//                    newMessage.arg1 = 2
+//                    handler.sendMessageDelayed(newMessage,300)
+//
+//                    true
+//                }
+//                2 -> {
+//                    button.setBackgroundResource(R.drawable.love_big)
+//                    jumpState = false
+//                    val newMessage = handler.obtainMessage()
+//                    newMessage.arg1 = 1
+//                    handler.sendMessageDelayed(newMessage,300)
+//                    true
+//                }
+//                else -> {
+//                    false
+//                }
+//            }
+//        }
 
         button.setOnLongClickListener {
-            val message = Message()
-            message.arg1 = if (jumpState) 1 else 2
-            isJump = true
-            handler.sendMessage(message)
+            val transitionDrawable = button.drawable as TransitionDrawable
+            transitionDrawable.startTransition(500)
+//            val message = Message()
+//            message.arg1 = if (jumpState) 1 else 2
+//            isJump = true
+//            handler.sendMessage(message)
             true
         }
     }

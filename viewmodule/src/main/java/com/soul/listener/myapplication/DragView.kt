@@ -20,32 +20,35 @@ class DragView(context: Context) : LinearLayout(context) {
 
         viewDragHelper = ViewDragHelper.create(this, 1.0f, object : ViewDragHelper.Callback() {
             override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int {
-                // 右侧边界
-                if (left > getWidth() - child.getMeasuredWidth()) {
-                    return getWidth() - child.getMeasuredWidth()
-                }
-                // 左侧边界
-                else if (left < 0) {
-                    return 0;
-                }
+//                // 右侧边界
+//                if (left > getWidth() - child.getMeasuredWidth()) {
+//                    return getWidth() - child.getMeasuredWidth()
+//                }
+//                // 左侧边界
+//                else if (left < 0) {
+//                    return 0;
+//                }
                 return left
 
             }
 
             override fun clampViewPositionVertical(child: View, top: Int, dy: Int): Int {
-                //顶部边界
-                if (top >height-child.measuredWidth){
-                    return height-child.measuredWidth
-                }
-                //底部边界
-                else if (top<0){
-                    return 0
-                }
+//                //顶部边界
+//                if (top >height-child.measuredWidth){
+//                    return height-child.measuredWidth
+//                }
+//                //底部边界
+//                else if (top<0){
+//                    return 0
+//                }
                 return top
             }
 
             override fun tryCaptureView(child: View, pointerId: Int): Boolean {
-            return true
+//                if (child is CircleView) {
+//                    return true
+//                }
+                return true
             }
 
             override fun onViewCaptured(capturedChild: View?, activePointerId: Int) {
