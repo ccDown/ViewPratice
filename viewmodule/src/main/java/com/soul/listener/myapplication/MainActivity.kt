@@ -5,7 +5,6 @@ import android.os.Build
 import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.support.v7.app.AppCompatActivity
-import android.util.LruCache
 import android.view.animation.BounceInterpolator
 import android.view.animation.Interpolator
 import android.view.animation.LinearInterpolator
@@ -92,9 +91,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        paintview.setOnLongClickListener {
-            true
-        }
+//        paintview.setOnLongClickListener {
+//            true
+//        }
     }
 
     class PointEvaluator<T> : TypeEvaluator<T> {

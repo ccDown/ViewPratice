@@ -14,6 +14,13 @@ fun printPdf():()-> Unit {
     }
 }
 
+
+class PdfPrint{
+    fun println(any:Any){
+        kotlin.io.println(any)
+    }
+}
+
 fun main(args: Array<String>) {
 
     var printpdf = printPdf()
@@ -72,8 +79,3 @@ class Hello {
     }
 }
 
-class PdfPrint{
-    fun println(any:Any){
-        kotlin.io.println(any)
-    }
-}

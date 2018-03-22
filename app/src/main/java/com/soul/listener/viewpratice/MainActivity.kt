@@ -50,7 +50,5 @@ class MainActivity : AppCompatActivity() {
             handler.sendMessage(message)
             true
         }
-
     }
-
 }
