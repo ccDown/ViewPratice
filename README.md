@@ -6,3 +6,4 @@
 # kservice  kotlin Service调用
 # viewmodule   kotlin 动画
 # colormatrixdemo  kotlin  图片美化
+# kswipelayout kotlin 手势拖动控件
